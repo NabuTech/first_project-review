@@ -1,0 +1,162 @@
+
+body{
+	background-color: #01012b;
+}
+	
+.wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wrapper{
+	height: 100px;
+	background-color: #01012b;
+	width: 99%;
+	position: fixed;
+}
+
+.logo{
+  height: 100px;
+  width: 40%;
+  background-image: url(img/eye.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo{
+	font-size: 20px;
+	font-family: ocr a std, monospace;
+	color: #ff2a6d;
+	text-align: center;
+}	
+.topnav{
+	overflow: hidden;
+}
+.topnav a{
+ 	text-decoration: none;
+	font-family: ocr a std, monospace;
+	letter-spacing: 4px;
+	font-size: 20px;
+	margin: 0 10px;
+	color: #05d9e8;
+}
+.topnav a:hover {
+  background-color: #ff2a6d;
+  color: #05d9e8;
+}
+
+.content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}	
+.content{
+	background-image: linear-gradient(#AA0387, #ff2a6d, #d1f7ff, #05d9e8, #005678, #01012b);
+	height: 500px;
+}	
+
+.content p{
+	text-align: center;
+	font-size: 20px;
+	font-family: ocr a std, monospace;
+	color: #ff2a6d;
+}
+
+.content h1{
+	text-align: center;
+	font-size: 20px;
+	font-family: ocr a std, monospace;
+	color: #ff2a6d;
+}
+
+.qoute {
+	float: center;
+	text-align: center;
+	margin: 30%;
+}
+
+.container {
+    margin: 34%;
+	position: fixed;
+}
+.button:hover {
+	border-color: #ff2a6d;
+}
+
+h3 {
+	font-family: ocr a std, monospace;
+	color: #01012b;
+}
+
+table {
+	border: none;
+	border-collapse: collapse;
+	padding: 4px;
+	font-family: ocr a std, monospace;
+	color: #01012b;
+}
+
+td {
+	text-align: left;
+}
+
+.movies{
+	display: flex;
+	margin: 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.movies: hover {
+	border: 1px solid #ff2a6d;
+}
+
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+form {
+	max-width: 64em;
+	margin: auto;
+}
+
+.success {
+	max-width: 64em;
+	margin: auto;
+}
+
+.bottomnav {
+  height: 100px;	
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottomnav a {
+  color: #05d9e8;
+  text-align: center;
+  text-decoration: none;
+  font-family: ocr a std, monospace;
+  font-size: 20px;
+}
+
+.bottomnav a:hover {
+  background-color: #ff2a6d;
+  color: #05d9e8;
+}
+

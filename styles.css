@@ -1,0 +1,43 @@
+:root {
+    --color-primary: rgb(0,255,0);
+    --color-secondary: rgb(192,192,192);
+    --color-dark-background: rgb(75,0,130);
+    --color-light-background: rgb(224,224,224);
+    --color-highlight: rgb(0, 249, 255);
+    --color-notification: rgb(99, 0, 171);
+    --color-interactive: rgb(255, 0, 255);
+    --color-critical: rgb(255, 0, 0);
+    font-family: "OCR A Std", "Courier New", monospace;
+  }
+
+  .container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .sample {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  .sample img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .sample a {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+  }
