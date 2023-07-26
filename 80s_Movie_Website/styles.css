@@ -1,9 +1,9 @@
 :root {
-    --color-primary: rgb(0,255,0);
-    --color-secondary: rgb(192,192,192);
-    --color-dark-background: rgb(75,0,130);
-    --color-light-background: rgb(224,224,224);
-    --color-highlight: rgb(0, 249, 255);
+    --color-primary: #ff2a6d;
+    --color-secondary: #005678;
+    --color-dark-background: #01012b;
+    --color-light-background: #d1f7ff;
+    --color-highlight: #05d9e8;
     --color-notification: rgb(99, 0, 171);
     --color-interactive: rgb(255, 0, 255);
     --color-critical: rgb(255, 0, 0);
@@ -17,45 +17,141 @@ body {
 }
 
 header {
-    background-color: var(--color-dark-background);
-    text-align: center;
-    margin: 0;
+    background-color: rgba(1, 1, 43, 0.8); /* Adjust the color and opacity as desired */
+    position: fixed;
+    z-index: 50;
+    height: 82px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 h1 {
     font-size: 36px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--color-light-background);
     margin: 0;
+    height: 100%;
+    position: relative;
+    padding-top: 50px;
 }
 
-aside {
-    background-color: var(--color-secondary);
-    width: 200px;
-    padding: 20px;
-    float: left;
-}
 
 main {
-    margin-left: 220px;
-    padding: 20px;
-}
-
-.row {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.card {
+    margin-left: 240px; /* Adjust the margin to accommodate the width of the aside */
+    padding: 25px 100px 100px;
     background-color: var(--color-light-background);
-    border: 1px solid var(--color-secondary);
-    padding: 10px;
-    flex: 1;
-    margin-right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 h2 {
-    font-size: 24px;
-    margin-top: 0;
+    font-size: 240%;
+    font-weight: 400;
+    padding: 34px 48px;
+    line-height: 130%;
+    color: var(--color-dark-background)
 }
+
+p {
+    line-height: 1.5em;
+    color: var(--colo);
+    margin-bottom: -16;
+    padding-bottom: 50px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 0.2px;
+    box-shadow: 0.2px 4px 5px var(--color-interactive);
+    background-color: var(--color-light-background);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie:hover {
+    animation: glitch 0.3s infinite;
+    box-shadow: 0 2px 10px var(--color-primary);
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, -2px);
+    }
+    40% {
+        transform: translate(2px, 2px);
+    }
+    60% {
+        transform: translate(-2px, -2px);
+    }
+    80% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.movie img {
+    transition: filter 0.3s ease-in-out;
+}
+
+.movie:hover img {
+    animation: flicker 0.5s infinite;
+    filter: grayscale(100%);
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 22%, 24%, 55% {
+        opacity: 0;
+    }
+}
+
+
+
+a {
+    color:var(--color-primary);
+    text-decoration: none;
+}
+aside {
+    flex-shrink: 0;
+    background-color: var(--color-highlight);
+    padding: 34px 0;
+    width: 236px; /* Changed 'min-width' to 'width' */
+    position: fixed; /* Added this line */
+    top: 82px; /* Adjust the top position based on the height of the header */
+    bottom: 0; /* Added this line */
+    left: 0; /* Added this line */
+}
+
+
