@@ -82,6 +82,7 @@ p {
     overflow: hidden;
 }
 
+
 .movie img{
     width: 100%;
 }
@@ -93,7 +94,7 @@ p {
     letter-spacing: 0.5px;
 }
 
-.movie:hover {
+.movie:not(.video-playing):hover {
     animation: glitch 0.3s infinite;
     box-shadow: 0 2px 10px var(--color-primary);
 }
