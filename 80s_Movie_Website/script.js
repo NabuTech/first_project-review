@@ -1,3 +1,4 @@
+User
 
 
 function playVideo(videoId) {
@@ -34,7 +35,33 @@ function getVideoUrlForMovie(videoId) {
     "IndianaJonesLastCrusade":"https://www.youtube.com/embed/DKg36LBVgfg?autoplay=1" ,
     
   };
-
-  return videoIdToUrlMap[videoId];
 }
 
+// Function to update the movie list based on filters
+function updateMovieList() {
+  const yearFilter = document.getElementById("yearFilter").value;
+  const genreFilter = document.getElementById("genreFilter").value;
+
+  // Get all the movie elements
+  const movieElements = document.querySelectorAll(".movie");
+
+  // Loop through each movie element and check if it matches the selected filters
+  movieElements.forEach(movieElement => {
+    const year = movieElement.getAttribute("data-year");
+    const genre = movieElement.getAttribute("data-genre");
+
+    // Check if the movie matches the selected filters or if filters are set to "All"
+    const isYearMatch = yearFilter === "" || year === yearFilter;
+    const isGenreMatch = genreFilter === "" || genre.includes(genreFilter);
+
+    // Hide or show the movie element based on the filter matches
+    if (isYearMatch && isGenreMatch) {
+      movieElement.style.display = "block";
+    } else {
+      movieElement.style.display = "none";
+    }
+  });
+}
+
+// Call the updateMovieList function initially to show all movies
+updateMovieList();
